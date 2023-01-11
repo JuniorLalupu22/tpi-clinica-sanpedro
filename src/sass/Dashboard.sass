@@ -1,0 +1,513 @@
+.tableBig
+    max-height: 450px !important
+.nombre
+    color: #222222
+    &:hover
+        text-decoration: underline
+        cursor: pointer
+.filaPacientes
+    grid-template-columns: 360px 1fr 1fr 1fr !important
+
+.active
+    border: 2px solid #50b4a1 !important
+    background: #ffffff !important
+.header_dashboard
+    width: 100%
+    height: 10vh
+    border-bottom: 3px solid #50B4A1
+    position: fixed
+    top: 0
+    display: flex
+    align-items: center
+    background: #ffffff
+    // z-index:2
+    .contenedor
+        width: 90%
+        margin: auto
+        max-width: 1200px
+        display: flex
+        align-items: center
+        justify-content: space-between
+        h1
+            font-weight: 400
+            color: #000
+            text-align: center
+            font-size: 28px
+            margin-left: -20px
+.contenedor_dashboard
+    height: 80vh
+    margin-top: 10vh
+    display: grid
+    grid-template-columns: auto 1fr
+    gap: 32px
+    .menu_cont
+        padding: 24px
+        .menu
+            display: flex
+            flex-direction: column
+            justify-content: center
+            background: #f4f4f4
+            height: 74vh
+            padding: 28px
+            border-radius: 13px
+            margin-left: 140px
+            .itemLong
+                display: flex
+                align-items: center
+                
+                .item
+                    margin-top: 22px
+                    margin-bottom: 22px
+                    cursor: pointer
+                    background: #dbdbdb
+                    padding: 6px
+                    border-radius: 25%
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    border: 2px solid transparent
+                    margin-right: 15px
+    .list
+        h2
+            // margin-top: 24px
+            margin-bottom: 16px
+            span
+                text-decoration: underline
+                cursor: pointer
+                font-weight: 400
+                font-size: 16px
+                color: #379e8b
+                &:hover
+                    font-weight: 600
+        .opcionesRapidas
+            width: 72%
+            display: grid
+            grid-template-columns: 1fr 1fr 1fr
+            gap: 25px
+            .opRapida
+                font-size: 18px
+                cursor: pointer
+                border-radius: 5px
+                padding: 20px 10px
+                background: #f4f4f4
+                text-align: center
+                transition: .3s ease all
+                &:hover
+                    font-weight: 700
+        .tableList
+            border-radius: 18px
+            background: #f4f4f4
+            width: 72%
+            max-height: 300px
+            overflow-y: scroll
+            .listado
+                width: 85%
+                margin: auto
+                padding-top: 20px
+                padding-bottom: 20px
+                .encabListado
+                    background: #03C8A4 !important
+                    color: #ffffff
+                .filaListado
+                    background: #ffffff
+                    padding: 15px
+                    border-radius: 12px
+                    margin-bottom: 15px
+                    display: grid
+                    grid-template-columns: 280px 1fr 1fr 1fr 1fr
+                    .datoListado
+                        padding: 0px 12px
+                    .atendido
+                        text-align: center
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        .cuadro
+                            cursor: pointer
+                            height: 26px
+                            width: 26px
+                            border: 2px solid #222222
+                            display: flex
+                            justify-content: center
+                            align-items: center
+                    .cancelar
+                        text-align: center
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        svg
+                            cursor: pointer
+
+.opcionesCita
+    display: flex
+    justify-content: space-between
+    width: 85%
+    margin-top: 24px
+    margin-bottom: 24px
+    .agregarCita
+        display: flex
+        align-items: center
+        justify-content: center
+        height: 30px
+        column-gap: 10px
+        border-radius: 15px
+        width: 150px
+        border: 2px solid #379e8b
+        // padding: 0px 5px
+        i, p
+            font-size: 17px
+            font-weight: 500
+            color: #379e8b
+    .agregarCita:hover
+        cursor: pointer
+    .selectorFecha
+        // display: grid
+        // grid-template-columns: repeat(2, 1fr)
+        display: flex
+        width: 100%
+        justify-content: center
+        gap: 10px
+        input
+            border: 2px solid #379e8b
+            padding: 2px 5px
+            // text-align: center
+            // border-style: none
+.card
+    width: 200px
+    height: 300px
+    background: #F4F4F4
+    border-radius: 15px
+    // display: flex
+    // box-shadow: 1px 5px 60px 0px #100a886b
+
+.card .card-border-top
+    width: 60%
+    height: 3%
+    background: #DBDBDB
+    margin: auto
+    border-radius: 0px 0px 15px 15px
+
+
+.card .img
+    width: 100%
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+
+.card .img i
+    font-size: 50px
+
+.card span
+    font-weight: 600
+    color: black
+    text-align: center
+    display: block
+    padding: 10px 5px
+    font-size: 20px
+    margin-top: 10%
+
+.card .job
+    font-weight: 400
+    color: black
+    display: block
+    text-align: center
+    padding-top: 3px
+    font-size: 15px
+
+.card .img
+    width: 110px
+    height: 110px
+    background: #DBDBDB
+    border-radius: 104px
+    margin: auto
+    margin-top: 20px
+
+.card .img img
+    width: 110px
+    height: 110px
+    border-radius: 104px
+
+.card button
+    // padding: 8px 25px
+    padding: 5px
+    display: block
+    margin: auto
+    // border-radius: 8px
+    border-radius: 104px
+    border: none
+    // margin-top: 20px
+    position: absolute
+    margin-top: -1.5%
+    margin-left: 9%
+    // margin-bottom: 5%
+    background: #50B4A1
+    color: white
+    font-weight: 600
+
+.card button:hover
+    // background: #534bf3
+    cursor: pointer
+
+
+.listadoPacientesPaginacion
+    display: flex
+    flex-direction: column
+    background-color: #F4F4F4
+    height: 61vh
+    width: 90%
+    padding: 20px
+    border-radius: 15px
+    margin-bottom: 4vh
+    .encabezadoPaginacion
+        display: grid
+        grid-template-columns: 62% 1fr
+        // gap: 10%
+        width: 98%
+        padding: 0% 5%
+        margin-bottom: 20px
+        // gap: -20px
+    .contenedorDatosPaciente
+        display: flex
+        justify-content: space-between
+        align-items: center
+        // font-size: 20px
+        background-color: #FFF
+        border-radius: 15px
+        padding: 1% 5%
+        margin-bottom: 3%
+        width: 100%
+        height: 45px
+        .contenidoDatosPaciente
+            display: grid
+            // grid-template-columns: repeat(2, 1fr)
+            grid-template-columns: 62% 1fr
+            // gap: 10%
+            width: 100%
+            .nombrePaciente
+                display: flex
+                gap: 10px
+
+.paginacionPacientes
+    display: flex
+    gap: 20px
+    justify-content: center
+    // background-color: #F4F4F4
+    width: 90%
+    height: 3vh
+    border-radius: 0 0 15px 15px
+    // padding: 5px
+    button
+        background-color: transparent
+        border: none
+    button:hover
+        cursor: pointer
+    button i
+        font-size: 20px
+    p
+        font-size: 20px
+        font-weight: bold
+
+
+@media screen and (max-width: 900px)
+    .btn_ops
+        display: block
+        position: fixed
+        // position: absolute
+        margin-left: 90%
+        // margin: auto
+        margin-top: 32px
+        .ops
+            background-color: transparent
+            border: none
+            i
+                font-size: 22px
+    .contenedor_dashboard
+        gap:0
+        // margin: auto
+        .menu_cont
+            // padding: 22px
+            padding: 0
+            .sidebar 
+                display: none
+            .sidebarOpen
+                position: fixed
+                z-index: 50
+                opacity: 1
+                margin-left: 58%
+                // background: red
+                margin-top: -3%
+                // padding-left: 20px
+                // width: 
+                // height: 20vh
+                .menu
+                    margin-top: -15%
+                    background-color: #f4f4f4
+                    height: 40vh
+                    // padding: 28px
+                    // padding: 20px
+                    margin-left: 0px
+                    .itemLong
+                        // justify-content: center
+                        // align-content: center
+                        // align-items: center
+                        .item
+                            margin-top: 15px
+                            margin-bottom: 15px
+        .list
+            margin: auto
+            h2
+                text-align: center
+    .card
+        margin: auto
+    .card button
+        margin-top: -4%
+        left: 46%
+
+
+/* From uiverse.io by @alexruix */
+
+.txtCardsHijos
+    margin-bottom: 26px 
+    margin-top: 31px
+
+.cardsHijos
+    margin-top: 31px
+    // max-width: 60%
+    // display: flex
+    // flex-wrap: nowrap
+    // gap: 20px
+    
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    row-gap: 20px
+    height: 68vh
+    // margin: auto
+    overflow-y: scroll
+    // display: flex
+    // display: flex
+    // display: grid
+    // grid-template-columns: repeat(2,1fr)
+    // gap: 20px
+    // grid-template-columns: repeat(4, 1fr)
+
+.card-hijo
+    width: 190px
+    height: 254px
+    border-radius: 20px
+    background: #f5f5f5
+    position: relative
+    padding: 1.8rem
+    border: 2px solid #c3c6ce
+    transition: 0.5s ease-out
+    overflow: visible
+    .card-details
+        color: black
+        height: 100%
+        gap: .5em
+        display: grid
+        place-content: center
+        .text-body
+            color: rgb(134, 134, 134)
+
+        .text-title
+            font-size: 1.5em
+            font-weight: bold
+            text-align: center
+        
+    .card-button
+        transform: translate(-50%, 125%)
+        width: 60%
+        border-radius: 1rem
+        border: none
+        background-color: #50B4A1
+        color: #fff
+        font-size: 1rem
+        padding: .5rem 1rem
+        position: absolute
+        left: 50%
+        bottom: 0
+        opacity: 0
+        transition: 0.3s ease-out
+
+.card-hijo:hover
+    border-color: #50B4A1
+    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25)
+    .card-button
+        transform: translate(-50%, 50%)
+        opacity: 1
+        cursor: pointer
+
+@media screen and ( max-width: 900px )
+    .contenidoDeHijos 
+        margin: auto
+        text-align: center
+        display: block
+        align-items: center
+        align-content: center
+        justify-content: center
+    .txtCardsHijos
+        // position: fixed
+        // margin-bottom: 10%
+        margin-top: 10%
+        // position: sticky
+   
+    .cardsHijos
+        // margin-top: 15%
+        margin: auto
+        display: grid
+        grid-template-columns: repeat(1, 1fr)
+        // justify-content: center
+        align-content: flex-start
+        gap:50px
+        // row-gap: 20px
+        // align-items: center
+        height: 77vh
+        // flex-direction: column
+        // position: relative
+        
+        // position: fixed
+        // margin-bottom: 2%
+        // overflow-y: scroll
+        // height: 50%
+        // row-gap: -20px
+        .card-hijo
+            margin: auto
+            width: 70%
+        
+            // position: static
+            // height: 120%
+            // margin-bottom: -80%
+            
+        //     .card-details
+        //         color: black
+        //         height: 100%
+        //         gap: .5em
+        //         display: grid
+        //         place-content: center
+        //         .text-body
+        //             color: rgb(134, 134, 134)
+
+        //         .text-title
+        //             font-size: 1.5em
+        //             font-weight: bold
+        //             text-align: center
+        .card-button
+            // transform: translate(-50%, 125%)
+            width: 60%
+            border-radius: 1rem
+            border: none
+            background-color: #50B4A1
+            color: #fff
+            font-size: 1rem
+            padding: .5rem 1rem
+            position: absolute
+            left: 50%
+            bottom: 0
+            transform: translate(-50%, 50%)
+            opacity: 1
+            // opacity: 1
+            // transition: 0.3s ease-out
+    
+        
+    

@@ -1,0 +1,142 @@
+.encabezadoHC
+    display: flex
+    gap: 15px
+    width: 90%
+    margin-top: 19px
+    .titulo-hc
+        margin-right: 10px
+    span
+        text-decoration: underline
+        cursor: pointer
+        margin: 5px 10px 0 5px
+        font-weight: 400
+        font-size: 16px
+        color: #379e8b
+        &:hover
+            font-weight: 600
+        
+h3
+    margin-bottom: 19px
+.cont
+    background: #f4f4f4
+    padding: 19px
+    padding-top: 28px
+    padding-bottom: 28px
+    width: 90%
+    border-radius: 9px
+    max-height: 60vh
+    overflow-y: scroll
+.cont input,.cont select,.cont textarea,.cont button
+    border: 2px solid #222222
+    padding: 8px
+    border-radius: 4px
+    width: 100%
+    display: block
+    margin-bottom: 17px
+    background-color: #ffffff 
+    margin-top: 13px
+    border: 2px solid #50B4A1
+
+.cont button 
+    cursor: pointer
+    &:hover
+        background: #50B4A1
+        color: #FFF
+
+.cont 
+    padding-left: 8%
+.cont textarea
+    width: 88%
+
+.cont button
+    width: 88%
+
+.cont select 
+    width: 90%
+.cont input
+    width: 90%
+
+.fila1
+    display: grid
+    grid-template-columns: repeat(4,1fr)
+    width: 89.5%
+    justify-content: space-between
+    label   
+        padding-top:24px
+
+.NombreEdad
+    width: 88%
+    display: flex
+    justify-content: space-between  
+    margin-bottom: 20px
+    label
+        font-size: 18px 
+
+.contenedorFormModal
+    background:#f4f4f4  
+    margin: 5%
+    h3
+        text-align: center
+        padding: 10px 10px 0px 10px
+    .formularioModal        
+        p
+            padding: 10px
+            label
+                font-weight: bold
+            input
+                margin-top: 10px
+                width: 100%
+                padding: 13px
+                border: 1px solid #03C8A4
+                border-radius: 5px
+            button
+                padding: 10px
+                margin-left: 35%
+                background-color: #44bea8
+                color: #FFF
+                border: none
+                border-radius: 5px
+                &:hover
+                    cursor: pointer
+                    background: #338576
+                    color: #FFF
+
+.enlaces 
+    background-color:#f4f4f4
+    padding: 10px
+    width: 90%
+    .linkFila1
+        max-width: 88%
+        display: flex 
+        justify-content: space-around
+        margin-left: 3%
+        margin-top: 10px
+    .linkFila2
+        margin-top: 2%
+        max-width: 92%
+        display: flex
+        justify-content: space-around
+
+.ScrollTable
+    overflow-y: auto
+    height: 60vh
+    margin-right: 15%
+    table
+        table-layout: fixed
+        border-collapse: collapse
+        border-collapse: collapse
+        text-align: center
+        thead
+            position: sticky
+            top: 0
+            text-align: center
+            background-color:#50B4A1
+            color: #fff
+            tr th
+                padding: 8px 15px
+                border: 1px solid rgb(201, 201, 201)
+                background: #50B4A1
+        tbody tr td
+            text-align: center
+            padding: 8px 15px
+            border: 1px solid rgb(201, 201, 201)

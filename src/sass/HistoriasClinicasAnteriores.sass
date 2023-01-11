@@ -1,0 +1,131 @@
+.mostrarHistClinicas
+    // display: grid
+    // grid-template-columns: 40% 60%
+    // padding: 20px
+    // column-gap:20px
+    // width: 100%
+    display: flex
+    margin: auto
+    justify-content: space-between
+    padding: 10px
+    column-gap: 50px
+    .histClinicas
+        width: 250px
+        height: 72vh
+        overflow-x: hidden
+        overflow-y: scroll
+        padding: 0px 15px 5px 1px
+
+// .card_HistClinicasAnt
+//     width: 700px
+//     // padding: 15px
+//     // max-height: 80vh
+//     transform: rotate(0deg)
+//     background: #f4f4f4
+//     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px
+//     transition-duration: 1.5s
+//     border-radius: 1rem
+//     padding: .7rem
+//     overflow-y: scroll
+    // transition-property: width, height,transform
+
+// .card__content_HistClinicasAnt 
+//     width: 100%
+//     padding: .7rem
+//     border-radius: 1rem
+//     background: #f4f4f4
+//     color: #212121
+//     overflow-y: scroll
+
+.contenedor_Mostrar_HistClinicas
+    background: #f4f4f4
+    padding: 20px
+    // padding-top: 10px
+    width: 70%
+    height: 77vh
+    border-radius: 9px
+    overflow-y: scroll
+    h3
+        text-align: left
+    label
+        text-align: left
+
+.contenedor_Mostrar_HistClinicas input,.contenedor_Mostrar_HistClinicas select,.contenedor_Mostrar_HistClinicas textarea,.contenedor_Mostrar_HistClinicas button
+    border: none
+    border: 2px solid #50B4A1
+    padding: 8px
+    border-radius: 4px
+    width: 100%
+    display: block
+    margin-bottom: 17px
+    background-color: #ffffff 
+    margin-top: 13px
+    // border: 2px solid 4A1#50B
+    // &:hover
+    //     border: none
+    //     border: 2px solid #50B4A1
+
+.contenedor_Mostrar_HistClinicas button 
+    cursor: pointer
+    &:hover
+        background: #50B4A1
+        color: #FFF
+
+.contenedor_Mostrar_HistClinicas textarea
+    width: 88%
+
+.contenedor_Mostrar_HistClinicas button
+    width: 88%
+
+.contenedor_Mostrar_HistClinicas select 
+    width: 90%
+.contenedor_Mostrar_HistClinicas input
+    width: 90%
+
+.fila1_Mostrar_HistClinicas
+    display: grid
+    grid-template-columns: repeat(4,1fr)
+    width: 89.5%
+    justify-content: space-between
+    label   
+        padding-top:24px
+        text-align: left
+
+.NombreEdad
+    width: 88%
+    display: flex
+    justify-content: space-between  
+    margin-bottom: 20px
+    label
+        font-size: 18px 
+        text-align: left
+
+//ESTILOS PARA LINK DE LAS HISTORIAS ANTERIORES
+.LinkHistClinicAnteriores
+    display: flex
+    width: auto
+    height: 3vh
+    // text-decoration: none
+    text-align: center
+    // display: block
+    justify-content: center
+    align-items: center
+    background-color: #F5F5F5
+    // padding: 5px 2px 2px 2px
+    border-radius: 5px
+    transition: all 0.3s ease-in
+    font-weight: bold
+    margin-bottom: 10px
+
+.LinkHistClinicAnteriores:hover
+    transform: scale(1.2)
+    cursor: pointer
+    p
+        color: #50B4A1
+
+.LinkHistClinicAnterioresActivo
+    // background-color: #50B4A1
+    transform: scale(1.2)
+    p
+        // color: #F5F5F5
+        color: #50B4A1

@@ -1,0 +1,22 @@
+* [33m299acea[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m Funcion switchMotivo para el componente InicioSecretaria
+* [33m4240800[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Se corrigieron errores JSX
+* [33mb551a35[m Avance de formulario de citas
+* [33mdff467b[m subir archivo en el componente FormApoderado
+* [33m74427e9[m Se corrigio la funcionalidad e eliminar en el componente Responsables
+* [33m09849b8[m Se corrigió formulario de consultas
+* [33md53dc68[m Corrigiendo interfaces
+* [33m5569ca4[m limpiando tablas
+* [33mfcf72f1[m Se arregló formulario del Responsable
+* [33m77f3e29[m Se agregó la sección de responsables
+* [33m6e3ecfa[m datos afiliacion
+*   [33m3640b2d[m Merge branch 'main' of https://github.com/Aldair31/ClinicaApp_Frontend
+[32m|[m[33m\[m  
+[32m|[m * [33mf77d7d8[m Pantalla de inicio personalizada
+* [33m|[m [33m6c9676c[m Frm de Filiacion
+[33m|[m[33m/[m  
+* [33m374c503[m Frm de Citas acabado
+* [33m80f71e5[m se corrigio fecha y hora
+* [33mb1a70f5[m Consumiendo citas
+* [33me0ba9e4[m Consumiendo citas primera version
+* [33m3c59ba0[m formulario para nueva cita
+* [33mcc3191c[m Modals Completos

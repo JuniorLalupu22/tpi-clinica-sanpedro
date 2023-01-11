@@ -1,0 +1,50 @@
+.modalPaciente
+    height: 100vh
+    background: #6b6b6b3b
+    width: 100%
+    position: absolute
+    top: 0
+    left: 0
+    display: flex
+    justify-content: center
+    align-items: center
+    .contenedorForms
+        width: 600px
+        padding: 20px
+        background: #ffffff
+        border-radius: 4px
+        max-height: 400px
+        overflow-y: scroll
+        form
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            div
+                width: 90%
+                input,button
+                    width: 100%
+                    display: block
+                    margin-top: 7px
+                    margin-bottom: 7px
+                    padding: 7px
+                    border-radius: 4px
+                    border: 2px solid #cccccc
+                    &:focus
+                        border: 2px solid #03C8A4
+                input[type='submit'],button
+                    background: #03c8a4
+                    cursor: pointer
+                    color: #ffffff
+                    border: 2px solid #03c8a4
+    .cerrarForm
+        width: 40px
+        height: 40px
+        background: #ffffff
+        position: absolute
+        right: 0
+        top: 0
+        display: flex
+        justify-content: center
+        align-items: center
+        cursor: pointer

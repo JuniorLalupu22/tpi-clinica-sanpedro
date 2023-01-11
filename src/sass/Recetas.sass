@@ -1,0 +1,280 @@
+.contenedorReceta
+    margin-top: 1.5%
+    // width: 85%
+    height: 82vh
+    max-height: 85vh
+    max-width: 860px
+    background: #f4f4f4
+    // background: red
+    overflow-y: scroll
+    border-radius: 10px
+    
+.titulo-re
+    width: 83.5%
+    display: flex
+    justify-content: space-between
+    margin-top: 20px
+    margin-bottom: -10px
+    margin-left: 3%
+    // h3
+    //     font-size: 20px
+    // span
+    //     text-decoration: underline
+    //     cursor: pointer
+    //     margin: 5px 10px 25px 10px
+    //     font-weight: 400
+    //     font-size: 16px
+    //     color: crimson
+    //     &:hover
+    //         font-weight: 600
+    //     i
+    //         font-size: 25px
+    //         margin-top: -10px
+    //         color: #15AABF
+    .proxCita
+        display: flex
+        gap: 8px
+        // label
+        //     text-align: right
+        input
+            margin-top: -4%
+            margin-bottom: 5%
+            border-radius: 2px
+            border: 1px solid #50B4A1
+            text-align: center
+            
+        //     margin-left: 2%
+
+.contenedor-re
+    
+    padding: 28px
+    width: 90%
+    border-radius: 9px
+    max-height: 480px
+    .fila1-re
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+    
+    .fila2-re
+        margin-top: 2.5%
+        textarea
+            border: 1.5px solid #50B4A1
+            padding: 8px
+            width: 100%
+            display: block
+            background-color: #ffffff 
+            margin-top: 13px
+            resize: none
+            &:focus
+                border: 1.5px solid #50B4A1            
+
+.contenedor-re input,.contenedor-re select,.contenedor-re textarea,.contenedor-re button
+    border: 1.5px solid #50B4A1
+    padding: 8px
+    width: 100%
+    display: block
+    background-color: #ffffff 
+    margin-top: 13px
+    resize: none
+
+.contenedor-re label
+    font-weight: bold   
+
+.cantidad-re label, .cantidad-re input
+    display: block
+    width: 50% 
+    margin-bottom: 10px
+
+.medicamento-re label, .medicamento-re input
+    display: block
+    width: 140%
+    margin-left: -40%
+    margin-bottom: 10px
+
+.listCantMed
+    display: block
+    position: relative
+    margin-top: -2.5%
+    .contenedorListCantidadMedic
+        position: absolute
+        .listaCantidadMedic
+            width: 175px
+            list-style: none
+            background: #dbdbdb
+            li
+                padding: 10px
+                cursor: pointer
+                &:hover
+                    border-left: 4px solid #50B4A1
+                    background: #FFF
+
+.listNombMed
+    margin-top: -2.5%
+    margin-left: -40.1%
+    position: relative
+    .contenedorListNombreMedic 
+        position: absolute   
+        .listaNombreMedic
+            list-style: none
+            width: 492.5px
+            background: #dbdbdb
+            cursor: pointer
+            li
+                padding: 10px
+                cursor: pointer
+                &:hover
+                    border-left: 4px solid #50B4A1
+                    background: #FFF
+
+.listIndMed
+    position: relative
+    .contenedorListIndicacionesMedic
+        position: absolute
+        .listaIndicacionesMedic
+            background: #dbdbdb
+            list-style: none
+            width: 701.5px
+            li
+                padding: 10px
+                cursor: pointer
+                &:hover
+                    border-left: 4px solid #50B4A1
+                    background: #FFF
+
+.contenedor-re button 
+    background: #50B4A1
+    color: #FFF
+    cursor: pointer
+    &:hover
+        background: #379e8b
+        color: #FFF
+
+.listPacientes
+    width: 100%
+    overflow-y: scroll
+    h2
+        margin-bottom: 16px
+        margin-top: 24px
+
+.contenedor_tabla 
+    width: 90%
+    overflow-y: scroll
+    margin-right: 10%
+    max-height: 30vh
+
+.tabla
+    max-width: 900px
+
+.tabla
+   
+    margin-left: 3%
+    width: 95.5%
+    // max-width: 900px
+    border-collapse: collapse
+    text-align: center
+    // height: 30vh
+    // overflow-y: scroll
+    // tbody
+    //     .tablaReceta
+    //         display: flow
+    //         // max-height: 180px
+    //         overflow: auto
+    // thead
+    //     display: inline-table
+    //     width: 100%
+    //     background-color:#50B4A1
+    //     // border-bottom: 3px solid #35495E
+    //     color: #fff
+    // tbody
+    //     display: block
+    //     height: 180px
+    //     overflow: auto
+    //     td
+    //         width: 100%
+
+.tabla thead
+    
+    background-color:#50B4A1
+    border-bottom: 3px solid #35495E
+    color: #fff
+
+// .tabla thead th tr 
+    
+//     &:nth-of-type(0)
+//         position: fixed
+
+.tabla th,.tabla td
+    // display: inline-table !important
+    // width: 20%
+    // max-width: 20%
+    // max-height: 100%
+    
+    border: 1px solid rgb(201, 201, 201)
+    padding: 10px
+	
+
+.tabla .tablaReceta td button i
+    color: #000
+    // display: inline-block
+    // color: #000
+    cursor: pointer
+    color: rgb(201, 68, 96)
+
+.botonesReceta
+    display: flex
+    justify-content: space-between
+    margin-left: 3%
+    width: 83.5%
+    margin-top: 3%
+    margin-bottom: 2%
+    button
+        padding: 8px
+        background-color: #50B4A1
+        color: #FFF
+        border: none
+        border-radius: 5px
+    .notDisabled
+        button
+            &:hover
+                cursor: pointer
+                background: #379e8b
+                color: #FFF
+    .Disabled
+        button
+            background-color: #a0dfd4
+.titulo_receta
+    display: flex
+    margin-top: 20px
+    // margin-bottom: -30px
+    margin-left: 3%
+    span
+        color: crimson
+        margin: 5px 10px 25px 10px
+        font-weight: 400
+        font-size: 16px
+        i
+            margin-top: -10px
+            font-size: 25px
+            cursor: pointer
+            color: #15AABF
+            &:hover
+                font-weight: 600
+
+
+.ModalReceta
+    padding: 10px
+    .ListaBotones
+        display: flex
+        button
+            padding: 10px
+            background-color: #50B4A1
+            color: #FFF
+            border: none
+            border-radius: 5px
+            width: 100%
+            margin: 0 5% 0 5%
+            &:hover
+                cursor: pointer
+                background: #379e8b
+                color: #FFF
+    

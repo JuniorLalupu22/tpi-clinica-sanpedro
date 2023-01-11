@@ -1,0 +1,256 @@
+.tablaCartilla
+    // overflow-y: auto
+    font-size: 12px
+    // height: 60vh
+    margin-right: 15%
+    table
+        table-layout: fixed
+        border-collapse: collapse
+        text-align: center
+        thead
+            // position: sticky
+            top: 0
+            text-align: center
+            color: #fff
+            tr th
+                padding: 5px 5px
+                border: 1px solid rgb(201, 201, 201)
+                background: #50B4A1
+        tbody tr 
+            td
+                text-align: center
+                padding: 5px 5px
+                border: 1px solid rgb(201, 201, 201)
+            .nombreVacuna
+                font-weight: bold
+                color: #FFFF
+                background: #50B4A1
+
+.listadoTemas
+    height: 50vh
+    display: flex
+    flex-direction: column
+    /* justify-content: space-evenly; */
+
+
+.listadoTemas .tema
+    display: flex
+    justify-content: space-between
+    align-items: center
+    font-size: 20px
+    background-color: #FFF
+    border-radius: 15px
+    padding: 1% 5%
+    margin-bottom: 4.5vh
+    height: 8vh
+
+
+.listadoTemas .tema p
+    font-weight: 500
+
+
+.listadoTemas .tema .iconosTema
+    display: flex
+    column-gap: 45px
+
+
+.listadoTemas .tema .iconosTema button
+    background-color: transparent
+    border: none
+
+
+.listadoTemas .tema .iconosTema button:hover
+    cursor: pointer
+
+
+.listadoTemas .tema .iconosTema button i
+    font-size: 20px
+
+
+.paginacionTema
+    display: flex
+    gap: 15px
+    justify-content: right
+    width: 70%
+    margin-left: 15%
+    margin-top: 2%
+    // position: relative;
+    // top: 15px
+
+
+.paginacionTema button
+    background-color: transparent
+    border: none
+
+
+.paginacionTema button:hover
+    cursor: pointer
+
+
+.paginacionTema button i
+    font-size: 20px
+
+
+.paginacionTema p
+    font-size: 20px
+    font-weight: bold
+
+.titulo_de_cartVacunacion
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    margin: auto
+    align-content: center
+    align-items: center
+    .txtCartilla
+        // width: 20%
+        // align-items: right
+        // display: grid
+        // align-self: right
+    .btnRegresarCart
+        display: grid
+        // justify-content: right
+        // align-content: right
+        align-self: right
+
+.cards_Vacunacion
+    display: grid
+    grid-template-columns: repeat(4,1fr)
+    row-gap: 15px
+    margin-top: 2%
+    height: 72vh
+    overflow-y: scroll
+    position: relative
+
+.card-Vacunacion 
+    width: 230px
+    // width: 100%
+    // height: 254px
+    height: 240px
+    position: relative
+    // outline: .5em solid #f5f5f5
+    background: #42caff
+    background: linear-gradient(to top, #50B4A1 0%, #42caff 100%)
+    border-radius: 10px
+    color:#FFF
+    .card-info-Vacunacion 
+        // bottom: 0
+        display: flex
+        // align-items: center
+        
+        position: absolute
+        width: 100%
+        height: 100%
+        justify-content: center
+        align-items: center
+        
+        // padding: 1.5em
+        // align-items: center
+        // text-align: center
+        transition: transform 1s cubic-bezier(0.785, 0.135, 0.150, 0.860)
+        .title-Vacunacion 
+            font-size: 1.3em
+            font-weight: bold
+            // text-align: center
+            // margin: auto
+            // display: flex
+            // justify-content: center
+            // align-content: center
+            // align-items: center
+
+            // margin-bottom: 20px solid #000
+        .title-Vacunacion::after 
+            content: ""
+            display: block
+            // display: none
+            width: 100%
+            height: 2px
+            margin: 0 auto 4%
+            background-color: #000
+            display: none
+        .subtitle-Vacunacion 
+            font-weight: 400
+            line-height: 1em
+            display: none
+
+    .card-bio-Vacunacion 
+        display: none
+        // padding: 1.8em
+        text-align: center
+        transform: translate(100%,40%)
+        transition: transform 1s cubic-bezier(0.785, 0.135, 0.150, 0.860)
+        p 
+            font-size: 16px
+            font-weight: 600
+            // line-height: 1.5em
+
+.card-Vacunacion::before 
+    content: ""
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    z-index: 4
+    background-color: rgba(80, 64, 44, 0)
+    transition: background-color 1s
+
+
+
+
+
+
+/*Text*/
+
+
+
+
+
+/*Hover*/
+.card-Vacunacion:hover::before 
+    // background-color: rgba(80, 64, 44, 0.25)
+
+
+.card-Vacunacion:hover .card-info-Vacunacion 
+    display: none
+    // overflow-x: hidden
+    // color: transparent
+    // display: block
+    // transform: translateX(-500%)
+    // position: relative
+    // opacity: 1
+
+
+.card-Vacunacion:hover .card-bio-Vacunacion 
+    display: block
+    transform: translate(0,30%)
+    opacity: 1
+
+
+@media screen and ( max-width: 900px )
+    .cards_Vacunacion
+        display: grid
+        grid-template-columns: repeat(1,1fr)
+        margin: auto
+        height: 76vh
+    .card-Vacunacion 
+        margin: auto
+        width: 250px
+    .titulo_de_cartVacunacion
+        width: 90%
+        margin: auto
+        margin-top: 6%
+        margin-bottom: 6%
+        .txtCartilla
+            // width: 20%
+            align-items: right
+            display: grid
+            align-self: right
+            align-content: right
+        .btnRegresarCart
+            display: grid
+            justify-content: right
+            // align-items: right
+            // align-content: right
+            // align-self: right
+
+    

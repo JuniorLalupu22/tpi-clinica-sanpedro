@@ -338,7 +338,7 @@ const FormFiliacion = ({ item }) => {
 							</div>
 							<div className='segundo'>
 								<div>
-									<label>Lugar de nacimiento</label>
+									<label>Región</label>
 									<Field className='mayus' type="text" name="lugar_nac" value={Hc.lugar_nac ? Hc.lugar_nac : ''} onChange={handleChange}></Field>
 								</div>
 								<ErrorMessage
@@ -481,7 +481,7 @@ const FormFiliacion = ({ item }) => {
 						<div className='fila3'>
 							<div className='primero'>
 								<div>
-									<label>Referencia</label>
+									<label>Distrito</label>
 									<Field className='mayus' type="text" name="referencia" value={Hc.referencia ? Hc.referencia : ''} onChange={handleChange}></Field>
 								</div>
 								<ErrorMessage

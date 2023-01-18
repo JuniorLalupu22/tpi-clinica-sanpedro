@@ -116,7 +116,6 @@ const MisCitasSecretaria = ({datos_af, loading, set_datos_af}) => {
 										{/* <th>RESPONSABLE</th> */}
 										<th>MOTIVO</th>
 										<th></th>
-										<th></th>
 									</tr>
 								</thead>
 								<tbody>

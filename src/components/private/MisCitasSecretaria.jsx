@@ -155,7 +155,7 @@ const MisCitasSecretaria = ({datos_af, loading, set_datos_af}) => {
                                                 >
                                                 </i>
                                             </td>
-											<td>
+											{/* <td>
                                                 <i 
                                                     className="fas fa-pen" 
                                                     style={{color: 'blue', cursor: 'pointer'}}
@@ -175,7 +175,7 @@ const MisCitasSecretaria = ({datos_af, loading, set_datos_af}) => {
 													}}
                                                 >
                                                 </i>
-                                            </td>
+                                            </td> */}
 										</tr>
 									))}
 								</tbody>

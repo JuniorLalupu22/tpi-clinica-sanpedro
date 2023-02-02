@@ -4,6 +4,7 @@ import '../../sass/DatosF.sass';
 import '../../sass/Antecedentes.sass';
 const Antecedentes = ({id}) => {
 	// const { id } = useParams();
+	
 	const [nuevo, setNuevo] = useState(null);
 	const [antecedentes, setAntecedentes] = useState({});
 	const handleChange = (e) => {

@@ -2,6 +2,7 @@ import React, { useEffect,useState, useRef} from 'react';
 import { useParams } from 'react-router';
 import url from '../../../keys/backend_keys';
 import '../../../sass/Recetas.sass'
+// import { Link } from 'react-router-dom';
 import moment from 'moment';
 import fondoReceta from '../../../img/FondoReceta.jpg'
 
@@ -461,7 +462,7 @@ const FormRecetas = () => {
             }}
         >
             <div className='titulo-re'>
-                <h3>AGREGAR RECETA MÉDICA</h3>
+            <h3>AGREGAR RECETA MÉDICA</h3> 
             </div>
             <div className='contenedor-re'
                 >
@@ -595,7 +596,7 @@ const FormRecetas = () => {
             </div>
             <div className='titulo-re'>
                 <h3>TABLA DE MEDICAMENTOS</h3>
-                <div className='proxCita'>
+                {/* <div className='proxCita'>
                     <label><b>PRÓXIMA CITA: </b></label>
                     <input 
                         type="date" 
@@ -604,7 +605,7 @@ const FormRecetas = () => {
                         value={Receta.fechaProx ? moment(Receta.fechaProx).format('YYYY-MM-DD') : ''}
                         disabled={Receta.length!==0?false:true}
                     ></input>
-                </div>
+                </div> */}
             </div>
             <div className='contenedor_tabla'>   
                 <Table className='tabla'>
@@ -614,7 +615,7 @@ const FormRecetas = () => {
                             <th>MEDICAMENTO</th>
                             <th>INDICACIÓN</th>
                             <th></th>
-                            <th></th>
+                            {/* <th></th> */}
                         </tr>
                     </thead>
                     <tbody>
@@ -655,7 +656,7 @@ const FormRecetas = () => {
                                         <i className="fas fa-trash-alt"></i>
                                     </button>
                                 </td>
-                                <td>
+                                {/* <td>
                                     <button 
                                         style={{backgroundColor: 'transparent', border: 'none', cursor: 'pointer'}}
                                         onClick={(e) => {
@@ -673,7 +674,7 @@ const FormRecetas = () => {
                                         >
                                         <i className="fas fa-pen"></i>
                                     </button>
-                                </td>
+                                </td> */}
                             </tr>
                         ))}
                     </tbody>
@@ -681,7 +682,7 @@ const FormRecetas = () => {
             </div>
             
             <div className='botonesReceta'>
-                <div className={Receta.fechaProx ? 'notDisabled' : 'Disabled'}>
+                {/* <div className={Receta.fechaProx ? 'notDisabled' : 'Disabled'}>
                     <button
                         onClick={handleClick}
                         // disabled={Re.length!==0?false:true}
@@ -689,16 +690,16 @@ const FormRecetas = () => {
                     >
                         ACTUALIZAR FECHA
                     </button>
-                </div>
+                </div> */}
                 {/* <div className={BtnAcitve ? 'notDisabled': 'Disabled'}>
                     <button id='mostrarRe' onClick={mostrarDoc} disabled={BtnAcitve ? false : true}>MOSTRAR RECETA</button>
                 </div> */}
                 {/* <div className={BtnAcitve ? 'notDisabled': 'Disabled'}>
                     <button id='descargarRe' onClick={guardarDoc} disabled={BtnAcitve ? false : true}>DESCARGAR RECETA</button>
                 </div> */}
-                {/* <div className={BtnAcitve ? 'notDisabled': 'Disabled'}>
+                <div className={BtnAcitve ? 'notDisabled': 'Disabled'}>
                     <button id='imprimirRe' onClick={imprimirDoc} disabled={BtnAcitve ? false : true}>IMPRIMIR RECETA</button>
-                </div> */}
+                </div>
             </div>   
         </div>
     )

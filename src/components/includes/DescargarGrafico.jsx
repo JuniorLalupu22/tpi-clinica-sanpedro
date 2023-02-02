@@ -34,9 +34,9 @@ const DescargarGrafico = ({grafico, datosPaciente}) => {
 		doc.setFont(undefined, 'bold').setFontSize(15).setTextColor('white').text(43, 35, moment().format('DD/MM/YYYY'));
 
 		//DATOS DE FIRMA
-		doc.setFont('helvetic', 'bold').setFontSize(11).setTextColor('white').text(202.5, 37, 'Dr. Juan C. Benites Herrera');
+		doc.setFont('helvetic', 'bold').setFontSize(11).setTextColor('white').text(202.5, 37, 'Dr. Falla Vidarte Eduardo Javier');
 		doc.setFont('helvetic', 'bold').setFontSize(9).setTextColor('white').text(209, 40.1, 'MÉDICO PEDIATRA');
-		doc.setFont('helvetic', 'bold').setFontSize(9).setTextColor('white').text(206, 43, 'C.M.P. 30305 - R.N.E 19230');
+		doc.setFont('helvetic', 'bold').setFontSize(9).setTextColor('white').text(206, 43, 'C.M.P. 039841');
 
 		doc.addImage(imgGrafico, 'JPEG', 13, 45, 271, 160, );
 		doc.setProperties({title: (nombrePaciente + ' - ' + moment().format('DD/MM/YYYY'))})

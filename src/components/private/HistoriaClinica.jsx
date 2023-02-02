@@ -55,6 +55,7 @@ const HistoriaClinica = () => {
 			
 	}, [id]);
 
+	
 	const ModalAntecedente = () => {
 		// {location}
 		// const { state = {} } = location;
@@ -148,6 +149,7 @@ const HistoriaClinica = () => {
 		// {location}
 		// const { state = {} } = location;
  		// const { modal } = state;
+		
         const [modal, setModal] = useState(false);
         return (
             <>
@@ -218,7 +220,7 @@ const HistoriaClinica = () => {
 				</div>
 				{/* &nbsp;&nbsp; */}
 				{/* <br /> */}
-				<div>
+				{/* <div>
 					<button
 						onClick={() => {
 							setModal(true);
@@ -236,7 +238,7 @@ const HistoriaClinica = () => {
 						
 					</button>
 					
-				</div>
+				</div> */}
 			</>
         );
     }
@@ -298,7 +300,7 @@ const HistoriaClinica = () => {
 				</div>
 
 				{/* <br /> */}
-				<div>
+				{/* <div>
 					<button
 						onClick={() => {
 							setModal(true);
@@ -316,7 +318,7 @@ const HistoriaClinica = () => {
 						
 					</button>
 					
-				</div>
+				</div> */}
 
 				
 			</>
@@ -423,7 +425,7 @@ const HistoriaClinica = () => {
 						</div>)
 					: null}   
 				</div>
-				<div>
+				{/* <div>
 					<button
 						onClick={() => {
 							setModal(true);
@@ -439,7 +441,7 @@ const HistoriaClinica = () => {
 					>
 						<strong>VER HISTORIAS ANTERIORES</strong>
 					</button>
-				</div>
+				</div> */}
 			</>
         );
     }
@@ -462,7 +464,7 @@ const HistoriaClinica = () => {
 					<div><ModalVacuna/></div>
 				</div>
 				<div className='linkFila2'>
-					<div>
+					{/* <div>
 						<Link
 							to={`/GraficoDeCrecimiento/${Hc.id_Historia}`}
 							style={{
@@ -473,7 +475,7 @@ const HistoriaClinica = () => {
 						>
 							<b>VER GRÁFICOS</b>
 						</Link>
-					</div>
+					</div> */}
 					{/* <GraficoDeCrecimiento/> */}
 					<div>
 						<Link 
@@ -485,10 +487,10 @@ const HistoriaClinica = () => {
 								// marginLeft:'50%'
 							}}
 						>
-							<b>RECETA</b>
+							<b>AGREGAR RECETA</b>
 						</Link>
 					</div>
-					<div>
+					{/* <div>
 						<Link
 							to={`/lista-orden/${id}`}
 							style={{
@@ -500,7 +502,7 @@ const HistoriaClinica = () => {
 						>
 							<b>ORDEN</b>
 						</Link>
-					</div>
+					</div> */}
 				</div>
 			</div>
 			<form className="cont">

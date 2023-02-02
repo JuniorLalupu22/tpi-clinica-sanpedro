@@ -95,7 +95,7 @@ const Dashboard = ({ usuario, logout }) => {
 											</NavLink>
 											Consultas
 										</div>
-										<div className="itemLong">
+										{/* <div className="itemLong">
 											<NavLink
 												className="item"
 												to="/citas"
@@ -127,7 +127,7 @@ const Dashboard = ({ usuario, logout }) => {
 												</svg>
 											</NavLink>
 											Pacientes
-										</div>
+										</div> */}
 									</>
 								) : null}
 

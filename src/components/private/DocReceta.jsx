@@ -31,7 +31,7 @@ const DocReceta = () => {
     // doc.addImage(img3, 'JPG', 0, 0);
 
     // //ENCABEZADO
-    // doc.setFont("times", 'normal').setFontSize(18).setTextColor(46, 52, 102).text(40, 40, 'Dr. Juan Carlos Benites Herrera');
+    // doc.setFont("times", 'normal').setFontSize(18).setTextColor(46, 52, 102).text(40, 40, 'Dr. Paulus');
     // doc.setFont(undefined, 'normal').setFontSize(12).text(98, 60, 'MEDICO PEDRIATRA');
     // doc.setFont(undefined, 'normal').setFontSize(12).text(85, 80, 'C.M.P. 30305 - R.N.E. 19230');
     // //LÍNEAS ATENCIÓN
@@ -188,9 +188,9 @@ const DocReceta = () => {
 
 
     //PIE
-    doc.setFont(undefined, 'bold').setFontSize(10).setTextColor('black').text(46, 210, 'Dr. Juan C. Benites Herrera');
+    doc.setFont(undefined, 'bold').setFontSize(10).setTextColor('black').text(46, 210, 'Dr. Falla Vidarte Eduardo Javier');
     doc.setFont(undefined, 'normal').setFontSize(8).text(57, 215, 'MEDICO PEDRIATRA');
-    doc.setFont(undefined, 'normal').setFontSize(8).text(52, 220, 'C.M.P. 30305 - R.N.E. 19230');
+    doc.setFont(undefined, 'normal').setFontSize(8).text(52, 220, 'C.M.P. 039841');
     //LÍNEA PIE FIRMA
     doc.setLineWidth(0.3).setDrawColor('black').line(42, 205, 96, 205);
 

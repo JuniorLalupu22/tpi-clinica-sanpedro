@@ -92,9 +92,15 @@ const ListaReceta = () => {
         <>
             <div className="contenedorReceta">
                 <div className='titulo_receta'>
-                    <h3>RECETAS MÉDICAS</h3>
+                <Link className="link" to={`../historia-clinica/${id}`}>
+			<i className="fa-solid fa-angle-left"></i>
+						</Link>                   
+                         <h3>RECETAS MÉDICAS</h3>
+			</div>
                     {/* <span onClick={onForm}><i className="fas fa-file-medical"></i></span> */}
                 </div>
+                    <div>
+			
                 {
                     form && 
                     <ModalCrearEliminar 

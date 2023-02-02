@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/clinica-frontend-tpi/static/css/main.d625f227.chunk.css",
-    "main.js": "/clinica-frontend-tpi/static/js/main.f7d96f24.chunk.js",
-    "main.js.map": "/clinica-frontend-tpi/static/js/main.f7d96f24.chunk.js.map",
+    "main.js": "/clinica-frontend-tpi/static/js/main.245c8049.chunk.js",
+    "main.js.map": "/clinica-frontend-tpi/static/js/main.245c8049.chunk.js.map",
     "runtime-main.js": "/clinica-frontend-tpi/static/js/runtime-main.0c73b7c7.js",
     "runtime-main.js.map": "/clinica-frontend-tpi/static/js/runtime-main.0c73b7c7.js.map",
     "static/js/2.f1f67057.chunk.js": "/clinica-frontend-tpi/static/js/2.f1f67057.chunk.js",
@@ -122,6 +122,6 @@
     "static/css/3.774fd6f6.chunk.css",
     "static/js/3.6265c8bf.chunk.js",
     "static/css/main.d625f227.chunk.css",
-    "static/js/main.f7d96f24.chunk.js"
+    "static/js/main.245c8049.chunk.js"
   ]
 }

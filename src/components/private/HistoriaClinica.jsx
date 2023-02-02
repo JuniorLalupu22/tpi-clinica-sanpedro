@@ -122,7 +122,7 @@ const HistoriaClinica = () => {
 				</div>
 				{/* <br /> */}
 				<div>
-					<button
+					{/* <button
 						onClick={() => {
 							setEstado(true);
 						}}
@@ -135,11 +135,11 @@ const HistoriaClinica = () => {
 							textDecoration:'underline',
 							
 						}}
-					>
+					> */}
 						<strong>VER ANTECEDENTES</strong>
 						
 						
-					</button>
+					{/* </button> */}
 					
 				</div>
 			</>

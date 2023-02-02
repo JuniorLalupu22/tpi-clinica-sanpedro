@@ -1,3 +1,3 @@
-const url = "http://localhost:5000"
+const url = "https://backend-tpi-production-570e.up.railway.app/"
 
 export default url;

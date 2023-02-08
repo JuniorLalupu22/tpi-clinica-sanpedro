@@ -4,10 +4,10 @@ import url from '../../../keys/backend_keys';
 import '../../../sass/Recetas.sass'
 // import { Link } from 'react-router-dom';
 import moment from 'moment';
-import fondoReceta from '../../../img/FondoReceta.jpg'
+import fondoReceta from '../../../img/FondoReceta2.jpeg';
 
-import { jsPDF } from "jspdf"
-import 'jspdf-autotable'
+import { jsPDF } from "jspdf";
+import 'jspdf-autotable';
 
 import {Table} from "reactstrap";
 import useMedicamentos from '../../../hooks/useMedicamentos';
@@ -468,7 +468,37 @@ const FormRecetas = () => {
                 >
                     <div className='fila1-re' 
                     >
-                        
+                        <div className='medicamento-re'>
+                            <label>MEDICAMENTO</label>
+                            <input 
+                                ref={nombreRef}
+                                placeholder="MEDICAMENTO" 
+                                type="text" 
+                                autoComplete='off' 
+                                name="nombreMedicina"
+                                id='medicamento' 
+                                value={MedicamentoReceta.nombreMedicina ? MedicamentoReceta.nombreMedicina : ''} 
+                                onChange={handleChangeMed}
+                                onFocus={()=>setCompletarNombre(true)}
+                                // onBlur={()=>{
+                                //         setCompletarNombre(false)
+                                // }}
+                                // onClick={completarNombre ? (()=>{setCompletarCantidad(false),setCompletarIndicaciones(false)}) : null}
+                            />
+                            <div className='listNombMed'>
+                                <div className='contenedorListNombreMedic'>
+                                    {
+                                        completarNombre && nombMedicina().map((item, index) => (
+                                            <ul className='listaNombreMedic' key={index}>
+                                                <li onClick={()=>handleNombreMedic(item)} key={item}>
+                                                    {item}
+                                                </li>
+                                            </ul>
+                                        ))   
+                                    }
+                                </div>
+                            </div>
+                        </div>
                         <div className='cantidad-re' >
                             <label>CANTIDAD</label>
                             <input 
@@ -512,7 +542,7 @@ const FormRecetas = () => {
                             </div>
                         </div>
                         
-                        <div className='medicamento-re'>
+                        {/* <div className='medicamento-re'>
                             <label>MEDICAMENTO</label>
                             <input 
                                 ref={nombreRef}
@@ -542,7 +572,7 @@ const FormRecetas = () => {
                                     }
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
 
                     <div className='fila2-re'>

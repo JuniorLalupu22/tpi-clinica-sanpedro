@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import useCita from '../../hooks/useCita';
 import '../../sass/Dashboard.sass';
+import getFecha from '../../functions/fecha';
 import moment from 'moment';
 import { Link } from 'react-router-dom';
 import url from '../../keys/backend_keys';
@@ -83,6 +84,7 @@ const InicioDoctor = () => {
 							// style={{height:'6.3vh'}}
 							type="date" 
 							name="fechaCita" 
+							min={getFecha()}
 							// value={fecha.fechaCita != '' ? moment(fecha.fechaCita).format('YYYY-MM-DD') : moment().format('YYYY-MM-DD')}
 							value={fecha.fechaCita}
 							onChange={handleChange}
@@ -96,7 +98,7 @@ const InicioDoctor = () => {
 								<thead>
 									<tr>
 										<th>N°</th>
-										<th>Hora</th>
+										<th>HORA</th>
 										<th>PACIENTE</th>
 										{/* <th>RESPONSABLE</th> */}
 										<th>MOTIVO</th>
@@ -145,7 +147,7 @@ const InicioDoctor = () => {
 					(
 						<div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', width: '85%', height: '60vh'}}>
 							<div>
-								<h2>LO SENTIMOS, NO HAY CONSULTAS REGISTRADAS DEL DÍA {moment(fecha.fechaCita).format('DD/MM/YYYY')}</h2>
+								<h2>NO HAY CONSULTAS REGISTRADAS DEL DÍA {moment(fecha.fechaCita).format('DD/MM/YYYY')}</h2>
 								{/* <img 
 									src='https://global-uploads.webflow.com/5e3ce2ec7f6e53c045fe7cfa/6041f96dd994118e5aa5b7e4_603dda4daa5db80f2a70a468_Discovery-01-1.png'
 									style={{height: '60vh'}}

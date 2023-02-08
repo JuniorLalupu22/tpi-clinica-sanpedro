@@ -56,6 +56,95 @@ const HistoriaClinica = () => {
 	}, [id]);
 
 	
+	// const ModalAntecedente = () => {
+	// 	// {location}
+	// 	// const { state = {} } = location;
+ 	// 	// const { modal } = state;
+    //     const [estado, setEstado] = useState(false);
+    //     return (
+    //         <>
+	// 		{/* <div className={modal ? "modal" : undefined}>
+	// 			{modal && <Link to="/">Close</Link>}
+	// 			<div>
+	// 				Bienvenido
+	// 			</div>
+	// 		</div> */}
+	// 			<div >
+	// 				{estado ? (
+	// 				<>
+	// 				<div
+	// 				 style={{
+	// 					background: '#00000039',
+	// 					position: 'absolute',
+	// 					top: '0',
+	// 					left: '0',
+	// 					height: '100vh',
+	// 					width: '100%',
+	// 					zIndex:'2',
+	// 					display: 'flex',
+	// 					justifyContent: 'center',
+	// 					alignItems: 'center',
+	// 				}}>
+	// 					<div style={{
+	// 					width:'65%',
+    //                     background: '#ffffff',
+    //                     padding: '0.5px',
+    //                     borderRadius: '6px',
+    //                 }}>
+	// 					<div style={{width:'110%', marginLeft:'2.75%', marginBottom:'2.75%'}}>
+	// 						<Antecedentes id={Hc.id_Historia}/>
+	// 					</div>
+						
+	// 					{/* <FormFiliacion/> */}
+	// 					</div>
+						
+					
+	// 					<button
+	// 					onClick={() => {
+	// 						setEstado(false);
+	// 					}}
+	// 					style={{
+	// 						position: 'absolute',
+	// 						top: '0',
+	// 						right: '0',
+	// 						border: 'none',
+	// 						padding: '18px',
+	// 						cursor: 'pointer',
+	// 					}}
+	// 					>
+	// 						<i
+	// 							className="fas fa-times"
+	// 							style={{ fontSize: '19px' }}
+	// 						></i>
+	// 					</button>
+	// 				</div>
+	// 				</>): null}   
+	// 			</div>
+	// 			{/* <br /> */}
+	// 			<div>
+	// 				{/* <button
+	// 					onClick={() => {
+	// 						setEstado(true);
+	// 					}}
+	// 					style={{
+	// 						border:'0',
+	// 						fontSize: '16px',
+	// 						cursor: 'pointer',
+	// 						color: 'crimson',
+	// 						backgroundColor:'transparent',
+	// 						textDecoration:'underline',
+							
+	// 					}}
+	// 				> */}
+	// 					<strong>VER ANTECEDENTES</strong>
+						
+						
+	// 				{/* </button> */}
+					
+	// 			</div>
+	// 		</>
+    //     );
+    // }
 	const ModalAntecedente = () => {
 		// {location}
 		// const { state = {} } = location;
@@ -122,7 +211,7 @@ const HistoriaClinica = () => {
 				</div>
 				{/* <br /> */}
 				<div>
-					{/* <button
+					<button
 						onClick={() => {
 							setEstado(true);
 						}}
@@ -135,16 +224,17 @@ const HistoriaClinica = () => {
 							textDecoration:'underline',
 							
 						}}
-					> */}
+					>
 						<strong>VER ANTECEDENTES</strong>
 						
 						
-					{/* </button> */}
+					</button>
 					
 				</div>
 			</>
         );
     }
+
 	const ModalFiliación = () => {
 		// {location}
 		// const { state = {} } = location;

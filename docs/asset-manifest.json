@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/clinica-frontend-tpi/static/css/main.d625f227.chunk.css",
-    "main.js": "/clinica-frontend-tpi/static/js/main.245c8049.chunk.js",
-    "main.js.map": "/clinica-frontend-tpi/static/js/main.245c8049.chunk.js.map",
+    "main.css": "/clinica-frontend-tpi/static/css/main.cf60fd56.chunk.css",
+    "main.js": "/clinica-frontend-tpi/static/js/main.67970109.chunk.js",
+    "main.js.map": "/clinica-frontend-tpi/static/js/main.67970109.chunk.js.map",
     "runtime-main.js": "/clinica-frontend-tpi/static/js/runtime-main.0c73b7c7.js",
     "runtime-main.js.map": "/clinica-frontend-tpi/static/js/runtime-main.0c73b7c7.js.map",
     "static/js/2.f1f67057.chunk.js": "/clinica-frontend-tpi/static/js/2.f1f67057.chunk.js",
@@ -16,13 +16,13 @@
     "static/js/5.065b88c1.chunk.js.map": "/clinica-frontend-tpi/static/js/5.065b88c1.chunk.js.map",
     "index.html": "/clinica-frontend-tpi/index.html",
     "static/css/3.774fd6f6.chunk.css.map": "/clinica-frontend-tpi/static/css/3.774fd6f6.chunk.css.map",
-    "static/css/main.d625f227.chunk.css.map": "/clinica-frontend-tpi/static/css/main.d625f227.chunk.css.map",
+    "static/css/main.cf60fd56.chunk.css.map": "/clinica-frontend-tpi/static/css/main.cf60fd56.chunk.css.map",
     "static/js/2.f1f67057.chunk.js.LICENSE.txt": "/clinica-frontend-tpi/static/js/2.f1f67057.chunk.js.LICENSE.txt",
     "static/js/3.6265c8bf.chunk.js.LICENSE.txt": "/clinica-frontend-tpi/static/js/3.6265c8bf.chunk.js.LICENSE.txt",
     "static/js/4.adb1d4d8.chunk.js.LICENSE.txt": "/clinica-frontend-tpi/static/js/4.adb1d4d8.chunk.js.LICENSE.txt",
     "static/js/5.065b88c1.chunk.js.LICENSE.txt": "/clinica-frontend-tpi/static/js/5.065b88c1.chunk.js.LICENSE.txt",
     "static/media/FondoOrden.eeba1213.jpg": "/clinica-frontend-tpi/static/media/FondoOrden.eeba1213.jpg",
-    "static/media/FondoReceta.5017ca25.jpg": "/clinica-frontend-tpi/static/media/FondoReceta.5017ca25.jpg",
+    "static/media/FondoReceta2.abd1e1a2.jpeg": "/clinica-frontend-tpi/static/media/FondoReceta2.abd1e1a2.jpeg",
     "static/media/Logo.df15f1f2.png": "/clinica-frontend-tpi/static/media/Logo.df15f1f2.png",
     "static/media/LogoGrafico.eec99be9.png": "/clinica-frontend-tpi/static/media/LogoGrafico.eec99be9.png",
     "static/media/fondoGraficoF.fd6843b6.jpg": "/clinica-frontend-tpi/static/media/fondoGraficoF.fd6843b6.jpg",
@@ -121,7 +121,7 @@
     "static/js/runtime-main.0c73b7c7.js",
     "static/css/3.774fd6f6.chunk.css",
     "static/js/3.6265c8bf.chunk.js",
-    "static/css/main.d625f227.chunk.css",
-    "static/js/main.245c8049.chunk.js"
+    "static/css/main.cf60fd56.chunk.css",
+    "static/js/main.67970109.chunk.js"
   ]
 }

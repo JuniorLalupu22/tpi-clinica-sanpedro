@@ -577,7 +577,7 @@ const HistoriaClinica = () => {
 								// marginLeft:'50%'
 							}}
 						>
-							<b>AGREGAR RECETA</b>
+							<b>LISTAR RECETAS</b>
 						</Link>
 					</div>
 					{/* <div>

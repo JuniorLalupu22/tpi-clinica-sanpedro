@@ -412,7 +412,7 @@ const HistoriaClinica = () => {
 				</div>
 
 				{/* <br /> */}
-				<div>
+				{/* <div>
 					<button
 						onClick={() => {
 							setModal(true);
@@ -430,7 +430,7 @@ const HistoriaClinica = () => {
 						
 					</button>
 					
-				</div>
+				</div> */}
 
 				
 			</>
@@ -578,7 +578,7 @@ const HistoriaClinica = () => {
 					<div><ModalVacuna/></div>
 				</div>
 				<div className='linkFila2'>
-					<div>
+					{/* <div>
 						<Link
 							to={`/GraficoDeCrecimiento/${Hc.id_Historia}`}
 							style={{
@@ -589,7 +589,7 @@ const HistoriaClinica = () => {
 						>
 							<b>VER GRÁFICOS</b>
 						</Link>
-					</div>
+					</div> */}
 					{/* <GraficoDeCrecimiento/> */}
 					<div>
 						<Link 

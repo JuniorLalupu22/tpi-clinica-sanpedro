@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 // import useCita from '../../hooks/useCita';
 import '../../sass/Dashboard.sass';
 import moment from 'moment';
+import getFecha from '../../functions/fecha';
 // import { Link } from 'react-router-dom';
 import url from '../../keys/backend_keys';
 import FormCita from './extras/FormCita';
@@ -26,6 +27,8 @@ const MisCitasSecretaria = ({datos_af, loading, set_datos_af}) => {
 					alignItems: 'center',
 				}}
 			>
+			
+				
 				<div className="nuevaCita">
 					<FormCita item={datos} datos_af={datos_af} set_datos_af={set_datos_af} setState={setState}/>
 				</div>
@@ -34,7 +37,7 @@ const MisCitasSecretaria = ({datos_af, loading, set_datos_af}) => {
 						setState(false);
 					}}
 					style={{
-						position: 'absolute',
+						position: 'relative',
 						top: '0',
 						right: '0',
 						border: 'none',
@@ -48,7 +51,8 @@ const MisCitasSecretaria = ({datos_af, loading, set_datos_af}) => {
 					></i>
 				</button>
 			</div>
-		)
+			
+		);
 	}
 	const switchMotivo = (valor) => {
 		switch (valor) {
@@ -98,6 +102,7 @@ const MisCitasSecretaria = ({datos_af, loading, set_datos_af}) => {
 						<input 
 							type="date" 
 							name="fechaCita" 
+							min={getFecha()}
 							value={fecha.fechaCita}
 							onChange={handleChange}
 						></input>

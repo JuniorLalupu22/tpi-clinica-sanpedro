@@ -22,6 +22,9 @@ const GraficoDeCrecimiento = ({usuario}) => {
 									<div className="dato_Graficos">
 									<div className='headerGraficos'>
 										<div>
+										{/* <Link className="link" to={`../historia-clinica/${id}`}>
+			<i className="fa-solid fa-angle-left"></i>
+						</Link> */}
 											<h2>Gráficos de Crecimiento</h2>
 										</div>
 										<div className='btnRegresarGraficos'>
@@ -43,6 +46,7 @@ const GraficoDeCrecimiento = ({usuario}) => {
 													<div className="img-section-Graficas">
 														<p>GRÁFICA DE 0 A 36 MESES</p>
 													</div>
+													
 													<div className="card-desc-Graficas">
 														<div className='buttonGraficas'>
 															<Link className="tooltip" to={`/GraficoDeCrecimientoPesoEdadNiño0a36/${id}`}>
@@ -50,7 +54,7 @@ const GraficoDeCrecimiento = ({usuario}) => {
 																<span className="tooltiptext"><i className="fa-solid fa-arrow-right"></i></span>
 															</Link>
 														</div>
-														<div className='buttonGraficas'>
+														{/* <div className='buttonGraficas'>
 															<Link className="tooltip" to={`/GraficoDeCrecimientoTallaEdadNiño0a36/${id}`}>
 																<p>TALLA - EDAD</p>
 																<span className="tooltiptext"><i className="fa-solid fa-arrow-right"></i></span>
@@ -67,14 +71,13 @@ const GraficoDeCrecimiento = ({usuario}) => {
 																<p>PC - EDAD</p>
 																<span className="tooltiptext"><i className="fa-solid fa-arrow-right"></i></span>
 															</Link>
-														</div>
+														</div> */}
 													</div>
 												</div>
-												<div className="card-Graficas">
+												{/* <div className="card-Graficas">
 													<div className="img-section-Graficas">
 														<p>GRÁFICA DE 2 A 20 AÑOS</p>
 														
-														{/* <i className="fa-solid fa-chart-line"></i> */}
 													</div>
 													<div className="card-desc-Graficas">
 														<div className='buttonGraficas'>
@@ -96,12 +99,12 @@ const GraficoDeCrecimiento = ({usuario}) => {
 															</Link>
 														</div>
 													</div>
-												</div>
-												<div className="card-Graficas">
+												</div> */}
+												{/* <div className="card-Graficas">
 													<div className="img-section-Graficas">
 														<p>GRÁFICA MAYORES A 7kg Y 77cm</p>
 														
-														{/* <i className="fa-solid fa-chart-line"></i> */}
+														
 													</div>
 													<div className="card-desc-Graficas">
 														<div className='buttonGraficas'>
@@ -111,7 +114,7 @@ const GraficoDeCrecimiento = ({usuario}) => {
 															</Link>
 														</div>
 													</div>
-												</div>
+												</div> */}
 											</div>
 											
 											{/* <h3>De 0 a 36 meses</h3>

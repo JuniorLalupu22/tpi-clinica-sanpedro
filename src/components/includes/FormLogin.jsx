@@ -16,7 +16,9 @@ const FormLogin = ({usuario,logearUsuario}) => {
 			alert('Ha ingresado datos inválidos')
 		}
 	};
-
+	const handleOnlyNumber = (e) => {
+        (!/[0-9]/.test(e.key)) && e.preventDefault();
+    }
 	useEffect(() => {
 		const usuarioLogeadoJson = window.localStorage.getItem('TOKEN')
 		if(usuarioLogeadoJson) {
@@ -67,6 +69,9 @@ const FormLogin = ({usuario,logearUsuario}) => {
 										type="text"
 										id="dni"
 										name="dni"
+										maxLength="8"
+										// pattern="[0-9]{0,9}"
+										onKeyPress= {handleOnlyNumber}
 										placeholder="Ingresa tu DNI"
 										autoComplete="off"
 									></Field>

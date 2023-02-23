@@ -23,6 +23,9 @@ const FormCita = ({item, datos_af, set_datos_af, setState}) => {
 		res(urlHist)
 	}, []);
 
+	const handleOnlyNumber = (e) => {
+        (!/[0-9]/.test(e.key)) && e.preventDefault();
+    }
 	citas.sort((a, b) => {
 		return (a.nombres_paciente.toLowerCase() < b.nombres_paciente.toLowerCase()) ? -1 : 1
 	})
@@ -287,7 +290,7 @@ const FormCita = ({item, datos_af, set_datos_af, setState}) => {
 							<div>
 								<div>
 									<label style={{marginLeft:'150px'}}><b>DNI o CODIGO Paciente</b></label>
-									<Field type="text" name="dni_paciente" autoComplete='off' style={{marginLeft:'150px', width:'61%'}}></Field>
+									<Field type="text" name="dni_paciente" maxLength="8" onKeyPress= {handleOnlyNumber} autoComplete='off' style={{marginLeft:'150px', width:'61%'}}></Field>
 								</div>
 								<div style={{marginLeft:'150px'}}>
 									<ErrorMessage

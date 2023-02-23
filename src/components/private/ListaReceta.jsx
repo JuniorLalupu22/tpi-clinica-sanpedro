@@ -136,7 +136,7 @@ const ListaReceta = () => {
                                     {listaReceta.map((item, index) => (
                                         <tr key={index}>
                                             <td>{index+1}</td>
-                                            <td>{moment(item.fecha).format('DD-MM-YYYY HH:mm')}</td>
+                                            <td>{moment(item.fecha).format('DD-MM-YYYY')}</td>
                                             <td>
                                                 <Link to={`/agregar-receta/${item._id}`}>
                                                     <strong

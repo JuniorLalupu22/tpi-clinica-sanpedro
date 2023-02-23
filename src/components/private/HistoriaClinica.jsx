@@ -13,6 +13,7 @@ import useIndicaciones from '../../hooks/useIndicaciones';
 import HistoriasClinicasAnteriores from './HistoriasClinicasAnteriores';
 
 // import '../../sass/Antecedentes.sass';
+
 const HistoriaClinica = () => {
 	let { id } = useParams();
 
@@ -25,10 +26,25 @@ const HistoriaClinica = () => {
 			})
 	}, [id]);
 	const handleChange = (e)=>{
-		setHc({
-			...Hc,
-			[e.target.name]: e.target.value
-		})
+		if([e.target.name]=="peso")
+			e.target.value<=50?setHc({...Hc,peso: e.target.value}):setHc({...Hc,peso: 0})
+		else if([e.target.name]=="talla")
+				e.target.value<=150?setHc({...Hc,talla: e.target.value}):setHc({...Hc,talla: 0})
+		else if([e.target.name]=="pc")
+		e.target.value<=90?setHc({...Hc,pc: e.target.value}):setHc({...Hc,pc: 0})
+		else if([e.target.name]=="fr")
+		e.target.value<=30?setHc({...Hc,fr: e.target.value}):setHc({...Hc,fr: 0})
+		else if([e.target.name]=="fc")
+		e.target.value<=120?setHc({...Hc,fc: e.target.value}):setHc({...Hc,fc: 0})
+		else if([e.target.name]=="saturacion")
+		e.target.value<=100?setHc({...Hc,saturacion: e.target.value}):setHc({...Hc,saturacion: 0})
+		else if([e.target.name]=="temperatura")
+		e.target.value<=40?setHc({...Hc,temperatura: e.target.value}):setHc({...Hc,temperatura: 0})
+		else	
+			setHc({
+				...Hc,
+				[e.target.name]: e.target.value
+			})
 	}
 	//TRAYENDO DATOS DE LA RECETA
 	const datosRe = useIndicaciones(id)
@@ -179,16 +195,10 @@ const HistoriaClinica = () => {
                         background: '#ffffff',
                         padding: '0.5px',
                         borderRadius: '6px',
+						position: 'relative',
+						
                     }}>
-						<div style={{width:'110%', marginLeft:'2.75%', marginBottom:'2.75%'}}>
-							<Antecedentes id={Hc.id_Historia}/>
-						</div>
-						
-						{/* <FormFiliacion/> */}
-						</div>
-						
-					
-						<button
+					<button
 						onClick={() => {
 							setEstado(false);
 						}}
@@ -206,6 +216,15 @@ const HistoriaClinica = () => {
 								style={{ fontSize: '19px' }}
 							></i>
 						</button>
+						<div style={{width:'110%', marginLeft:'2.75%', marginBottom:'2.75%'}}>
+							<Antecedentes id={Hc.id_Historia}/>
+						</div>
+						
+						{/* <FormFiliacion/> */}
+						</div>
+						
+					
+						
 					</div>
 					</>): null}   
 				</div>
@@ -352,22 +371,15 @@ const HistoriaClinica = () => {
 						justifyContent: 'center',
 						alignItems: 'center',
 					}}>
+
 						<div style={{
 						width:'82%',
                         background: '#ffffff',
                         padding: '4px',
                         borderRadius: '6px',
+						position: 'relative'
                     }}>
-						<div style={{width:'98%', marginLeft:'3.5%'}}>
-							<Vacunas id={Hc.id_Historia}/>
-						</div>
-						
-						{/* <FormFiliacion item={Hc.id_Historia}/> */}
-						{/* <FormFiliacion/> */}
-						</div>
-						
-					
-						<button
+					<button
 						onClick={() => {
 							setModal(false);
 						}}
@@ -385,12 +397,22 @@ const HistoriaClinica = () => {
 								style={{ fontSize: '19px' }}
 							></i>
 						</button>
+						<div style={{width:'98%', marginLeft:'3.5%'}}>
+							<Vacunas id={Hc.id_Historia}/>
+						</div>
+						
+						{/* <FormFiliacion item={Hc.id_Historia}/> */}
+						{/* <FormFiliacion/> */}
+						</div>
+						
+					
+						
 					</div>
 					</>): null}   
 				</div>
 
 				{/* <br /> */}
-				{/* <div>
+				<div>
 					<button
 						onClick={() => {
 							setModal(true);
@@ -408,7 +430,7 @@ const HistoriaClinica = () => {
 						
 					</button>
 					
-				</div> */}
+				</div>
 
 				
 			</>
@@ -486,13 +508,8 @@ const HistoriaClinica = () => {
 								background: '#ffffff',
 								padding: '20px 20px',
 								borderRadius: '6px',
+								position: 'relative',
 							}}>
-								<div>
-									<HistoriasClinicasAnteriores id={Hc.id_Historia} fechaNac={datos.fecha_nac}/>
-								</div>
-							</div>
-							
-						
 							<button
 								onClick={() => {
 									setModal(false);
@@ -512,6 +529,13 @@ const HistoriaClinica = () => {
 								>
 								</i>
 							</button>
+								<div>
+									<HistoriasClinicasAnteriores id={Hc.id_Historia} fechaNac={datos.fecha_nac}/>
+								</div>
+							</div>
+							
+						
+							
 						</div>)
 					: null}   
 				</div>
@@ -554,7 +578,7 @@ const HistoriaClinica = () => {
 					<div><ModalVacuna/></div>
 				</div>
 				<div className='linkFila2'>
-					{/* <div>
+					<div>
 						<Link
 							to={`/GraficoDeCrecimiento/${Hc.id_Historia}`}
 							style={{
@@ -565,7 +589,7 @@ const HistoriaClinica = () => {
 						>
 							<b>VER GRÁFICOS</b>
 						</Link>
-					</div> */}
+					</div>
 					{/* <GraficoDeCrecimiento/> */}
 					<div>
 						<Link 
@@ -626,13 +650,14 @@ const HistoriaClinica = () => {
 				<div className='fila1'>
 					<label>Peso (kg)</label>
 					<input id='fila2' placeholder="Peso" type="number" min="0" value={Hc.peso ? Hc.peso : ''} name="peso" onChange={handleChange}/>
+
 					<label id='f2'>Talla (cm)</label>
-					<input placeholder="Talla" type="number" min="0" value={Hc.talla ? Hc.talla : ''} name="talla" onChange={handleChange}/>
+					<input placeholder="Talla" type="number" min="0"  value={Hc.talla ? Hc.talla : ''} name="talla" onChange={handleChange}/>
 					
 				</div>
 				<div className="fila1">
 					<label>IMC (kg/m2)</label>
-					<input id='fila3' placeholder="IMC" type="text" min="0" readOnly = {true} value={Hc.imc ? Hc.imc : ''} name="imc" onChange={handleChange}/>
+					<input id='fila3' placeholder="IMC" type="text" min="0" style={{background: "#DCDCDC"}} readOnly = {true} value={Hc.imc ? Hc.imc : ''} name="imc" onChange={handleChange}/>
 					<label id='f3'>PC (cm)</label>
 					<input placeholder="PC" type="number" min="0" value={Hc.pc ? Hc.pc : ''} name="pc" onChange={handleChange}/>
 				</div>

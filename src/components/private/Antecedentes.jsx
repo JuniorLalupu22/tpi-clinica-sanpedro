@@ -8,10 +8,23 @@ const Antecedentes = ({id}) => {
 	const [nuevo, setNuevo] = useState(null);
 	const [antecedentes, setAntecedentes] = useState({});
 	const handleChange = (e) => {
-		setAntecedentes({
-			...antecedentes,
-			[e.target.name]: e.target.value,
-		});
+		if([e.target.name]=="peso_al_nacer")
+			e.target.value<=10?setAntecedentes({...antecedentes,peso_al_nacer: e.target.value}):setAntecedentes({...antecedentes,peso_al_nacer: 0})
+		else if([e.target.name]=="talla_al_nacer")
+				e.target.value<=60?setAntecedentes({...antecedentes,talla_al_nacer: e.target.value}):setAntecedentes({...antecedentes,talla_al_nacer: 0})
+		else if([e.target.name]=="pc")
+				e.target.value<=40?setAntecedentes({...antecedentes,pc: e.target.value}):setAntecedentes({...antecedentes,pc: 0})
+		else if([e.target.name]=="edadGestacional")
+				e.target.value<=9?setAntecedentes({...antecedentes,edadGestacional: e.target.value}):setAntecedentes({...antecedentes,edadGestacional: 0})
+		else if([e.target.name]=="apgar1")
+				e.target.value<=2?setAntecedentes({...antecedentes,apgar1: e.target.value}):setAntecedentes({...antecedentes,apgar1: 0})
+		else if([e.target.name]=="apgar5")
+				e.target.value<=2?setAntecedentes({...antecedentes,apgar5: e.target.value}):setAntecedentes({...antecedentes,apgar5: 0})
+		else
+			setAntecedentes({
+				...antecedentes,
+				[e.target.name]: e.target.value,
+			});
 	};
 	useEffect(() => {
 		fetch(`${url}/Antecedentes/${id}`)

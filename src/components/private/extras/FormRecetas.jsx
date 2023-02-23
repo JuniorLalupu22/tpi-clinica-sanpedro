@@ -1,8 +1,10 @@
 import React, { useEffect,useState, useRef} from 'react';
 import { useParams } from 'react-router';
+// import { Link } from 'react-router-dom';
 import url from '../../../keys/backend_keys';
 import '../../../sass/Recetas.sass'
 // import { Link } from 'react-router-dom';
+// import getFecha from '../../functions/fecha';
 import moment from 'moment';
 import fondoReceta from '../../../img/FondoReceta2.jpeg';
 
@@ -48,6 +50,9 @@ const FormRecetas = () => {
         return cantMed.slice(0,5)
 
     }
+    const handleOnlyNumber = (e) => {
+        (!/[0-9]/.test(e.key)) && e.preventDefault();
+    }
     const nombMedicina = () =>{
         if (terminoNombre.length===0) {
             return nombreMed.slice(0,5)
@@ -68,6 +73,7 @@ const FormRecetas = () => {
         return indMed.slice(0,5)
 
     }
+    
     const [MedicamentoReceta, setMedicamentoReceta] = useState([]);
     const handleChangeMed = (e) => {
         setMedicamentoReceta({
@@ -450,7 +456,8 @@ const FormRecetas = () => {
             document.removeEventListener('click', handleOutIndicaciones);
         }
     }
-
+    
+      
     return (
         <div className='contenedorReceta' 
             // onClick={()=>{(ocultarCantidad(), ocultarNombre(), ocultarIndicaciones())}}
@@ -462,6 +469,9 @@ const FormRecetas = () => {
             }}
         >
             <div className='titulo-re'>
+            {/* <Link className="link" to={`.../lista-receta/${id}`}>
+			<i className="fa-solid fa-angle-left"></i>
+						</Link> */}
             <h3>AGREGAR RECETA MÉDICA</h3> 
             </div>
             <div className='contenedor-re'
@@ -504,12 +514,15 @@ const FormRecetas = () => {
                             <input 
                                 ref={cantidadRef}
                                 placeholder="CANTIDAD" 
-                                type="text" 
+                                type="text"
+                                maxLength={"1"}
+                                onKeyPress= {handleOnlyNumber}
                                 autoComplete='off'
                                 name="cantidad" 
                                 id='cantidad' 
                                 value={MedicamentoReceta.cantidad ? MedicamentoReceta.cantidad : ''} 
                                 onChange={handleChangeMed}
+                                // onChange={handleNumeroChange}
                                 onFocus={()=>setCompletarCantidad(true)}
                                 onBlur={()=>{
                                     // !completarCantidad ? ()=>{setCompletarCantidad(false)} : null
@@ -626,16 +639,17 @@ const FormRecetas = () => {
             </div>
             <div className='titulo-re'>
                 <h3>TABLA DE MEDICAMENTOS</h3>
-                {/* <div className='proxCita'>
+                <div className='proxCita'>
                     <label><b>PRÓXIMA CITA: </b></label>
                     <input 
                         type="date" 
                         name='fechaProx' 
+                        // min={getFecha()}
                         onChange={handleChangeRe} 
                         value={Receta.fechaProx ? moment(Receta.fechaProx).format('YYYY-MM-DD') : ''}
                         disabled={Receta.length!==0?false:true}
                     ></input>
-                </div> */}
+                </div>
             </div>
             <div className='contenedor_tabla'>   
                 <Table className='tabla'>
@@ -712,7 +726,7 @@ const FormRecetas = () => {
             </div>
             
             <div className='botonesReceta'>
-                {/* <div className={Receta.fechaProx ? 'notDisabled' : 'Disabled'}>
+                <div className={Receta.fechaProx ? 'notDisabled' : 'Disabled'}>
                     <button
                         onClick={handleClick}
                         // disabled={Re.length!==0?false:true}
@@ -720,7 +734,7 @@ const FormRecetas = () => {
                     >
                         ACTUALIZAR FECHA
                     </button>
-                </div> */}
+                </div>
                 {/* <div className={BtnAcitve ? 'notDisabled': 'Disabled'}>
                     <button id='mostrarRe' onClick={mostrarDoc} disabled={BtnAcitve ? false : true}>MOSTRAR RECETA</button>
                 </div> */}
@@ -728,7 +742,7 @@ const FormRecetas = () => {
                     <button id='descargarRe' onClick={guardarDoc} disabled={BtnAcitve ? false : true}>DESCARGAR RECETA</button>
                 </div> */}
                 <div className={BtnAcitve ? 'notDisabled': 'Disabled'}>
-                    <button id='imprimirRe' onClick={imprimirDoc} disabled={BtnAcitve ? false : true}>IMPRIMIR RECETA</button>
+                    <button id='imprimirRe' onClick={imprimirDoc} disabled={BtnAcitve ? false : true}>IMPRIMIR</button>
                 </div>
             </div>   
         </div>

@@ -18,12 +18,22 @@ const InicioSecretaria =  () => {
     const [state, setState] = useState(false);
     const [value, onChange] = useState(new Date());
     const [eliminar, setEliminar]= useState(false)
-    const handleDateClick = (arg) => { // bind with an arrow function
+    const handleDateClick = (arg) => { 
+        // bind with an arrow function
+        
         if(arg.dateStr){
             setState(true)
         }
     }
-
+    const [thisTime, setThisTime] = useState("")
+    const [thisDate, setThisDate] = useState("")
+    const handleOpenModal = (event)=>{
+        setState(true)
+        const date = new Date(event.dateStr)
+        // console.log(event.dateStr.localDateString("en-US"))
+        setThisDate(date.toLocaleDateString("en-US"))
+        setThisTime(date.toLocaleTimeString("en-US"))
+    }
     //PARA OBTENER TODOS LAS RESERVAS
     const [res, setRes] = useState({});
 
@@ -139,8 +149,11 @@ const InicioSecretaria =  () => {
         )
     }
 
-    const Modal = () => {
-        const [reservas, setReservas] = useState({});
+    const Modal = ({myTime="",myDate=""}) => {
+        const [reservas, setReservas] = useState({
+            hora: myTime,
+            fecha: myDate
+        });
         const handleChange = (e) => {
             setReservas({
                 ...reservas,
@@ -186,18 +199,22 @@ const InicioSecretaria =  () => {
                             />
                         </p>
                         <p>
-							<label>Fecha</label>
-							<input name="fecha" type="date" min={getFecha()} onChange={handleChange}
-                                value={reservas.fecha}/>
+							<label>Fecha:</label>
+							{
+                                !reservas.fecha ? <input name="fecha" type="date" min={getFecha()} onChange={handleChange}
+                                value={reservas.fecha}/>:<span>{reservas.fecha}</span>
+                            }
                         </p>
                         <p>
                             <label>Hora:  </label>
-                            <input
+                            {
+                                !reservas.hora ? <input
                                 type='time'
                                 name='hora'
                                 onChange={handleChange}
                                 value={reservas.hora}
-                            />
+                            />:<span>{reservas.hora}</span>
+                            }
                         </p>
                         <p>
                             <button 
@@ -282,7 +299,7 @@ const InicioSecretaria =  () => {
 
     return (
         <>
-            {state && <Modal/>}
+            {state && <Modal myTime={thisTime} myDate={thisDate}/>}
             {eliminar && <ModalEliminar/>}
             {/* {eliminar && <Eliminar/>} */}
             {/* <div style={{position:'absolute',marginLeft:'60%', top: '82px'}}>
@@ -339,7 +356,7 @@ const InicioSecretaria =  () => {
                     // eventContent={NombreYFecha}
                     editable= {false}
                     select={handleDateClick}
-                    dateClick={onChange}
+                    dateClick={handleOpenModal}
                     dayMaxEventRows={ true} // for all non-TimeGrid views
                     // view={{
                     //     timeGrid: {
@@ -355,15 +372,17 @@ const InicioSecretaria =  () => {
                         
                         }
                     
-                    customButtons={{
-                        AgregarReserva:{
-                            text:'+ Reserva',
-                            click: function() {
-                                setState(true);
-                            }
-                            // icon:'left-single-arrow'
-                        }
-                    }}
+                    // customButtons={{
+                    //     AgregarReserva:{
+                    //         text:'+ Reserva',
+                    //         click: function() {
+                    //             setThisDate("");
+                    //             setThisTime("")
+                    //             setState(true);
+                    //         }
+                    //         // icon:'left-single-arrow'
+                    //     }
+                    // }}
                     eventRemove={true}
                     onChange={onChange}
                     value={value}

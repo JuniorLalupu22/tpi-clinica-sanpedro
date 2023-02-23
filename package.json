@@ -1,7 +1,7 @@
 {
   "name": "proyecto_tst",
   "version": "0.1.0",
-  "homepage": "https://JuniorLalupu22.github.io/clinica-tpi-frontend",
+  "homepage": "https://JuniorLalupu22.github.io/proyecto-clinica-tpi",
   "private": true,
   "engines": {
     "node": "16.x"

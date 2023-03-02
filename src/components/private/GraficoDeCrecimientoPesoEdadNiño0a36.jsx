@@ -1,5 +1,6 @@
 // import moment from 'moment'
 import React, {useRef} from 'react'
+import { useHistory } from 'react-router-dom'
 import { Line } from 'react-chartjs-2'
 import useHistClinica from '../../hooks/useHistClinica'
 import RedireccionAGraficos from './RedireccionAGraficos'
@@ -7,6 +8,7 @@ import calcularEdad from './../../functions/calcularEdad'
 import pluginGrafico from '../../functions/pluginGrafico'
 import useFiliacionUnica from '../../hooks/useFiliacionUnica'
 import OpcionesPDF from '../includes/OpcionesPDF'
+
 
 const GraficoDeCrecimientoPesoEdadNiño0a36 = () => {
 	//IMG
@@ -40,9 +42,15 @@ const GraficoDeCrecimientoPesoEdadNiño0a36 = () => {
 
 	//Extrayendo datos de paciente
 	const datosPaciente = useFiliacionUnica()
-
+	const {go} = useHistory()
   return (
     <>
+	<h3> <div style={{cursor:"pointer"}} className="link" to={`../GraficoDeCrecimiento/`}>
+                    <i  onClick={()=>{go(-1)}}  className="fa-solid fa-angle-left"></i> GRÁFICO
+                </div></h3>
+				<div className='NombreEdad'>
+					<label><b>Paciente: </b> {datosPaciente.nombres_paciente && datosPaciente.nombres_paciente}</label>
+				</div>
 		{(grafico && datosPaciente) && (
 			<div style={{display: 'flex', justifyContent: 'right'}}>
 				<OpcionesPDF grafico={grafico} datosPaciente={datosPaciente}/>

@@ -2,7 +2,7 @@ import React from "react";
 import jsPDF from "jspdf";
 import moment from "moment";
 import calcularEdad from '../../functions/calcularEdad'
-import LogoGrafico from '../../img/LogoGrafico.png'
+import LogoGrafico from '../../img/LogoGrafico.jpeg'
 import fondoGraficoF from '../../img/fondoGraficoF.jpg'
 import fondoGraficoM from '../../img/fondoGraficoM.jpg'
 

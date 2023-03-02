@@ -1,5 +1,5 @@
 import React, { useEffect,useState, useRef} from 'react';
-import { useParams } from 'react-router';
+import { useParams, useHistory } from 'react-router';
 // import { Link } from 'react-router-dom';
 import url from '../../../keys/backend_keys';
 import '../../../sass/Recetas.sass'
@@ -16,6 +16,7 @@ import useMedicamentos from '../../../hooks/useMedicamentos';
 import calcularEdad from '../../../functions/calcularEdad';
 
 const FormRecetas = () => {
+    const { go } = useHistory();
     //ESTADO PARA SABER SI HAY MEDICAMENTOS EN UNA RECETA Y HABILITAR BOTONES PARA ACCIONES DE DOCUMENTO (MOSTRAR, DESCARGAR E IMPRIMIR)
     const [BtnAcitve, setBtnActive] = useState(false)
     const [terminoCantidad, setTerminoCantidad] = useState("")
@@ -472,7 +473,9 @@ const FormRecetas = () => {
             {/* <Link className="link" to={`.../lista-receta/${id}`}>
 			<i className="fa-solid fa-angle-left"></i>
 						</Link> */}
-            <h3>AGREGAR RECETA MÉDICA</h3> 
+                        <h3> <div style={{cursor:"pointer"}} className="link" to={`../lista-receta/`}>
+                    <i  onClick={()=>{go(-1)}}  className="fa-solid fa-angle-left"></i> AGREGAR RECETA MÉDICA
+                </div> </h3> 
             </div>
             <div className='contenedor-re'
                 >

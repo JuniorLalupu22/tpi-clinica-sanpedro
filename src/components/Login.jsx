@@ -1,13 +1,13 @@
 import React from 'react';
 import FormLogin from './includes/FormLogin';
 import '../sass/Login.sass';
-import Logo from '../img/Logo.png'
+import Logo from '../img/Logo.jpeg'
 
 function Login() {
 	return (
 		<>
 		<div className="Contenedor_logueo">
-			{/* <div className="imagen_logueo">
+			<div className="imagen_logueo">
 				<img
 					className="img_logueo"
 					// src = "https://i.ibb.co/LnDz8sY/1.png"
@@ -18,7 +18,7 @@ function Login() {
 					width=""
 					height=""
 				/>
-			</div> */}
+			</div>
 			<div className="formulario">
 				<FormLogin/>
 			</div>

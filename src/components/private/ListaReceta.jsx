@@ -121,7 +121,7 @@ const ListaReceta = () => {
                 }
                 {modalAccepted && <ModalAccepted message='Eliminado Correctamente' setModalAccepted={setModalAccepted}/>}
                 {
-                    listaReceta.length > 0 &&
+                    listaReceta.length > 0 ?
                         <div className='ScrollTable' style={{marginLeft: '3%'}}>
                             <table>
                                 <thead>
@@ -171,7 +171,11 @@ const ListaReceta = () => {
                                     ))}
                                 </tbody>
                             </table>
-                        </div>
+                        </div> : <p><div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', width: '85%', height: '60vh'}}>
+							<div>
+								<h2>NO HAY RECETAS</h2>
+							</div>
+						</div></p>
                 }
             </div>
             </div>

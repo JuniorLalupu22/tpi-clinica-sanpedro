@@ -148,11 +148,6 @@ const InicioDoctor = () => {
 						<div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', width: '85%', height: '60vh'}}>
 							<div>
 								<h2>NO HAY CONSULTAS REGISTRADAS DEL DÍA {moment(fecha.fechaCita).format('DD/MM/YYYY')}</h2>
-								{/* <img 
-									src='https://global-uploads.webflow.com/5e3ce2ec7f6e53c045fe7cfa/6041f96dd994118e5aa5b7e4_603dda4daa5db80f2a70a468_Discovery-01-1.png'
-									style={{height: '60vh'}}
-								>
-								</img> */}
 							</div>
 						</div>
 					)
